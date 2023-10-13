@@ -6,5 +6,5 @@ def palindrome_checker(number):
             print(False)
 
 
-list_with_numbers = input().replace(",", "").split()
+list_with_numbers = input().split(", ")
 palindrome_checker(list_with_numbers)
