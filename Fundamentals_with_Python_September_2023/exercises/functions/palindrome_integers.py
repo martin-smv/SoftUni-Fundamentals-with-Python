@@ -1,6 +1,6 @@
 def palindrome_checker(number):
     for current_number in number:
-        if current_number[0] == current_number[len(current_number) - 1]:
+        if current_number == current_number[::-1]:
             print(True)
         else:
             print(False)
