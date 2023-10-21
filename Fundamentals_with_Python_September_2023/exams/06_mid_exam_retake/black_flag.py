@@ -15,4 +15,5 @@ percentage = (total_plunder / expected_plunder) * 100
 if total_plunder >= expected_plunder:
     print(f"Ahoy! {total_plunder:.2f} plunder gained.")
 else:
+
     print(f"Collected only {percentage:.2f}% of the plunder.")
