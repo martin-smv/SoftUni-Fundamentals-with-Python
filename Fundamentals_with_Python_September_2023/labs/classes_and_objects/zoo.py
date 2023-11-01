@@ -15,13 +15,15 @@ class Zoo:
         elif species == "bird":
             self.birds.append(name)
 
+        Zoo.__animals += 1
+
     def get_info(self, species):
         if species == "mammal":
-            return f"Mammals in {self.zoo_name}: {', '.join(self.mammals)}\nTotal animals: {count_of_animals}"
+            return f"Mammals in {self.zoo_name}: {', '.join(self.mammals)}\nTotal animals: {Zoo.__animals}"
         elif species == "fish":
-            return f"Fishes in {self.zoo_name}: {', '.join(self.fishes)}\nTotal animals: {count_of_animals}"
+            return f"Fishes in {self.zoo_name}: {', '.join(self.fishes)}\nTotal animals: {Zoo.__animals}"
         elif species == "bird":
-            return f"Birds in {self.zoo_name}: {', '.join(self.birds)}\nTotal animals: {count_of_animals}"
+            return f"Birds in {self.zoo_name}: {', '.join(self.birds)}\nTotal animals: {Zoo.__animals}"
 
 
 name_of_the_zoo = input()
