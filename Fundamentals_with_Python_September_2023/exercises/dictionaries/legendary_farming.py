@@ -30,8 +30,6 @@ while not obtained:
 
         if obtained:
             break
-    if obtained:
-        break
 
 print(f"{obtained_item} obtained!")
 for material, quantity in materials.items():
