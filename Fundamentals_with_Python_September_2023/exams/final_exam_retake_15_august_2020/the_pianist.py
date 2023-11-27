@@ -1,5 +1,5 @@
 def add_func(piece, composer, key, dictionary):
-    if piece not in dictionary:
+    if piece not in dictionary.keys():
         dictionary[piece] = [composer, key]
         print(f"{piece} by {composer} in {key} added to the collection!")
     else:
@@ -9,7 +9,7 @@ def add_func(piece, composer, key, dictionary):
 
 
 def remove_func(piece, dictionary):
-    if piece in dictionary:
+    if piece in dictionary.keys():
         dictionary.pop(piece)
         print(f"Successfully removed {piece}!")
     else:
@@ -19,7 +19,7 @@ def remove_func(piece, dictionary):
 
 
 def change_key_func(piece, key, dictionary):
-    if piece in dictionary:
+    if piece in dictionary.keys():
         dictionary[piece][1] = key
         print(f"Changed the key of {piece} to {key}!")
     else:
@@ -61,7 +61,7 @@ while True:
         pieces_dict = change_key_func(piece, new_key, pieces_dict)
 
 
-for piece in pieces_dict:
-    composer = pieces_dict[piece][0]
-    key = pieces_dict[piece][1]
+for piece, value in pieces_dict.items():
+    composer = value[0]
+    key = value[1]
     print(f"{piece} -> Composer: {composer}, Key: {key}")
