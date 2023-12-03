@@ -58,6 +58,4 @@ while command != "Complete":
             password = password.replace(char, new_char)
             print(password)
 
-
-
     command = input()
